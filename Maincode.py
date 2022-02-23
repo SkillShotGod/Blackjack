@@ -169,7 +169,25 @@ class blackjack:
         self.bank=money
         self.starthand()
         
+    def reset_occurence(self):
+        self.occurence={
+            'A': 0,
+            '2': 0,
+            '3': 0,
+            '4': 0,
+            '5': 0,
+            '6': 0,
+            '7': 0,
+            '8': 0,
+            '9': 0,
+            '10': 0,
+            'J': 0,
+            'Q': 0,
+            'k': 0
+        }
+        
     def starthand(self):
+        self.reset_occurence()
         self.betcheck()
         self.turn=0
         self.revealcard()
